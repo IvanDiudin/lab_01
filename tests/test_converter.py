@@ -1,6 +1,9 @@
 import pytest
+
 from toolkit.converter import convert
 from toolkit.errors import ConversionError
+
+
 def test_length():
     assert convert(1000, "mm", "m") == 1.0
 def test_mass():

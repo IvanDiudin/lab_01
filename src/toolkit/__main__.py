@@ -1,8 +1,11 @@
 import argparse
 import sys
+
 from toolkit.calculator import calculate
 from toolkit.converter import convert
 from toolkit.errors import ToolkitError
+
+
 def main():
     parser = argparse.ArgumentParser(prog="toolkit")
     subparsers = parser.add_subparsers(dest="command")

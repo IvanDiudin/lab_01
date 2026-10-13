@@ -1,4 +1,5 @@
 from toolkit.errors import ConversionError
+
 LENGTH_TO_METERS = {"mm": 0.001, "cm": 0.01, "m": 1.0, "km": 1000.0}
 MASS_TO_KG = {"g": 0.001, "kg": 1.0}
 def convert(value: float, from_unit: str, to_unit: str) -> float:

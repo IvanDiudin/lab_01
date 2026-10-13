@@ -1,6 +1,9 @@
 import pytest
+
 from toolkit.calculator import calculate
 from toolkit.errors import CalculatorError
+
+
 def test_add():
     assert calculate("2 + 3") == 5.0
 def test_sub():

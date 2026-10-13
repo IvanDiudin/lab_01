@@ -1,4 +1,6 @@
 from toolkit.errors import CalculatorError
+
+
 def tokenize(expression: str) -> list:
     tokens = []
     i = 0
