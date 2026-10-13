@@ -2,6 +2,7 @@ from toolkit.errors import CalculatorError
 
 
 def tokenize(expression: str) -> list:
+    """Разбивает строку выражения на список токенов."""
     tokens = []
     i = 0
     current_number = ""
@@ -39,10 +40,17 @@ def tokenize(expression: str) -> list:
 
 
 def calculate(expression: str) -> float:
+    """Вычисляет математическое выражение, возвращает результат."""
     tokens = tokenize(expression)
 
     if len(tokens) == 0:
         raise CalculatorError("Пустое выражение")
+
+    if len(tokens) % 2 == 0:
+        raise CalculatorError("Неполное выражение")
+
+    if tokens[0] in "+-*/" or tokens[-1] in "+-*/":
+        raise CalculatorError("Неполное выражение")
 
     i = 0
     while i < len(tokens):
