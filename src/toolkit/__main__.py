@@ -29,5 +29,7 @@ def main():
     except ToolkitError as e:
         print(f"Ошибка: {e}", file=sys.stderr)
         sys.exit(2)
+
+
 if __name__ == "__main__":
     main()

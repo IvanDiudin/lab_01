@@ -9,6 +9,8 @@ def test_cli_help():
         check=False,
     )
     assert result.returncode == 0
+
+
 def test_cli_calc():
     result = subprocess.run(
         [sys.executable, "-m", "toolkit", "calc", "2 + 3 * 4"],
@@ -18,6 +20,8 @@ def test_cli_calc():
     )
     assert result.returncode == 0
     assert result.stdout.strip() == "14.0"
+
+
 def test_cli_error():
     result = subprocess.run(
         [sys.executable, "-m", "toolkit", "calc", "1 / 0"],
