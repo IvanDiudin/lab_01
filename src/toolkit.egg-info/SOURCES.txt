@@ -10,3 +10,5 @@ src/toolkit.egg-info/SOURCES.txt
 src/toolkit.egg-info/dependency_links.txt
 src/toolkit.egg-info/top_level.txt
 tests/test_calculator.py
+tests/test_cli.py
+tests/test_converter.py
